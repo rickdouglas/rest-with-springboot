@@ -18,6 +18,7 @@ public class MathController {
 		Double sum = convertToDouble(numberOne) + convertToDouble(numberTwo);
 		return sum;
 	}
+<<<<<<< HEAD
 	
 	@RequestMapping(value = "/subtraction/{numberOne}/{numberTwo}", method = RequestMethod.GET)
 	public Double subtraction(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
@@ -63,6 +64,8 @@ public class MathController {
 		Double sum = (Double) Math.sqrt(convertToDouble(number));
 		return sum;
 	}
+=======
+>>>>>>> 7477e3485ef9d6a66d7c2f16f7f9f43850c9bf1e
 
 	private Double convertToDouble(String strNumber) {
 		if (strNumber == null) return 0D;
