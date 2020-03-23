@@ -1,57 +1,49 @@
 package br.com.erudio.services;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.erudio.exception.ResourceNotFoundException;
 import br.com.erudio.model.Person;
+import br.com.erudio.repository.PersonRepository;
 
 @Service
 public class PersonService {
-	private final AtomicLong counter = new AtomicLong();
+	@Autowired
+	PersonRepository repository;
 	
 	public Person create (Person person) {
-		
-		return person;
+		return repository.save(person);
 	}
 	
-	public Person update (Person person) {
-		
-		return person;
+	
+	public Person findById(Long id) {
+		return repository.findById(id).orElseThrow(
+				() -> new ResourceNotFoundException("No records found for this id")) ;
 	}
 	
-	public void delete(String id) {
+	public Person update(Person person) {
+		Person entity = repository.findById(person.getId()).orElseThrow(
+				() -> new ResourceNotFoundException("No records found for this id")) ;;
 		
-	}
-	
-	public Person findById(String id) {
-		Person person = new Person();
-		person.setId(counter.incrementAndGet());
-		person.setFirstName("Rick Douglas");
-		person.setLastName("Miranda");
-		person.setAddress("Lavras - MG");
-		person.setGender("Male");
-		return person ;
+		entity.setFirstName(person.getFirstName());
+		entity.setLastName(person.getLastName());
+		entity.setAddress(person.getAddress());
+		entity.setGender(person.getGender());
+		return repository.save(entity) ;
 	}
 	
 	public List<Person> findAll(){
-		List<Person> persons = new ArrayList<Person>();
-		for (int i = 0; i < 8; i++) {
-			Person person = mockPerson(i);
-			persons.add(person);
-		}
-		return persons ;
+		return repository.findAll();
+	}
+	
+	public void delete(Long id) {
+		Person entity = repository.findById(id).orElseThrow(
+				() -> new ResourceNotFoundException("No records found for this id")) ;;
+		repository.delete(entity);
 	}
 
-	private Person mockPerson(int i) {
-		Person person = new Person();
-		person.setId(counter.incrementAndGet());
-		person.setFirstName("Person name" +i);
-		person.setLastName("Last name"+i);
-		person.setAddress("Addres"+i);
-		person.setGender("Male");
-		return person ;
-	}
+
 }
