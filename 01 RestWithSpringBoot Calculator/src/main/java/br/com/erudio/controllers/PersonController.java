@@ -1,5 +1,7 @@
 package br.com.erudio.controllers;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +27,9 @@ public class PersonController {
 	
 	@GetMapping(value = "/{id}", produces = {"application/json", "application/xml"} )
 	public PersonVO findById(@PathVariable("id") Long id){
-		return services.findById(id);
+		PersonVO personVO = services.findById(id);
+		personVO.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel());
+		return personVO;
 	}
 	
 	@GetMapping(produces = {"application/json", "application/xml"})

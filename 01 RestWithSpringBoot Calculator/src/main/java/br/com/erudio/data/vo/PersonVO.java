@@ -2,10 +2,13 @@ package br.com.erudio.data.vo;
 
 import java.io.Serializable;
 
+import org.springframework.hateoas.ResourceSupport;
+
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.github.dozermapper.core.Mapping;
 
 @JsonPropertyOrder({"id","firstName", "lastName", "address", "gender"})
-public class PersonVO implements Serializable {
+public class PersonVO extends ResourceSupport implements Serializable {
 
 	@Override
 	public int hashCode() {
@@ -14,7 +17,7 @@ public class PersonVO implements Serializable {
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
-		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + (int) (key ^ (key >>> 32));
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		return result;
 	}
@@ -43,7 +46,7 @@ public class PersonVO implements Serializable {
 				return false;
 		} else if (!gender.equals(other.gender))
 			return false;
-		if (id != other.id)
+		if (key != other.key)
 			return false;
 		if (lastName == null) {
 			if (other.lastName != null)
@@ -54,7 +57,8 @@ public class PersonVO implements Serializable {
 	}
 
 	private static final long serialVersionUID = 1L;
-	private long id;
+	@Mapping("id")
+	private long key;
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -64,12 +68,12 @@ public class PersonVO implements Serializable {
 
 	}
 
-	public long getId() {
-		return id;
+	public long getKey() {
+		return key;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setKey(long key) {
+		this.key = key;
 	}
 
 	public String getFirstName() {
