@@ -34,19 +34,28 @@ public class PersonController {
 	
 	@GetMapping(produces = {"application/json", "application/xml"})
 	public List<PersonVO> findAll(){
-		return services.findAll();
+		List<PersonVO> persons = services.findAll();
+		persons.stream().forEach(p -> 
+		p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel())
+		);
+		return persons;
 	}
 	
 	@PostMapping(produces = {"application/json", "application/xml"},
 				 consumes = {"application/json", "application/xml"})
 	public PersonVO create(@RequestBody PersonVO person){
-		return services.create(person);
+		PersonVO personVO = services.create(person);
+		personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
+		return personVO;
+		
 	}
 	
 	@PutMapping(produces = {"application/json", "application/xml"},
 			 	consumes = {"application/json", "application/xml"})
 	public PersonVO update(@RequestBody PersonVO person){
-		return services.update(person);
+		PersonVO personVO = services.update(person);
+		personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
+		return personVO;
 	}
 	
 	@DeleteMapping("/{id}")
