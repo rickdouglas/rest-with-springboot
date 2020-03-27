@@ -16,47 +16,47 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.erudio.data.vo.PersonVO;
-import br.com.erudio.services.PersonService;
+import br.com.erudio.data.vo.BookVO;
+import br.com.erudio.services.BookService;
 
 @RestController
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/book")
+public class BookController {
 	
 	@Autowired
-	private PersonService services;
+	private BookService services;
 	
 	@GetMapping(value = "/{id}", produces = {"application/json", "application/xml"} )
-	public PersonVO findById(@PathVariable("id") Long id){
-		PersonVO personVO = services.findById(id);
-		personVO.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel());
-		return personVO;
+	public BookVO findById(@PathVariable("id") Long id){
+		BookVO bookVO = services.findById(id);
+		bookVO.add(linkTo(methodOn(BookController.class).findById(id)).withSelfRel());
+		return bookVO;
 	}
 	
 	@GetMapping(produces = {"application/json", "application/xml"})
-	public List<PersonVO> findAll(){
-		List<PersonVO> persons = services.findAll();
-		persons.stream().forEach(p -> 
-		p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel())
+	public List<BookVO> findAll(){
+		List<BookVO> books = services.findAll();
+		books.stream().forEach(p -> 
+		p.add(linkTo(methodOn(BookController.class).findById(p.getKey())).withSelfRel())
 		);
-		return persons;
+		return books;
 	}
 	
 	@PostMapping(produces = {"application/json", "application/xml"},
 				 consumes = {"application/json", "application/xml"})
-	public PersonVO create(@RequestBody PersonVO person){
-		PersonVO personVO = services.create(person);
-		personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
-		return personVO;
+	public BookVO create(@RequestBody BookVO book){
+		BookVO bookVO = services.create(book);
+		bookVO.add(linkTo(methodOn(BookController.class).findById(bookVO.getKey())).withSelfRel());
+		return bookVO;
 		
 	}
 	
 	@PutMapping(produces = {"application/json", "application/xml"},
 			 	consumes = {"application/json", "application/xml"})
-	public PersonVO update(@RequestBody PersonVO person){
-		PersonVO personVO = services.update(person);
-		personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
-		return personVO;
+	public BookVO update(@RequestBody BookVO book){
+		BookVO bookVO = services.update(book);
+		bookVO.add(linkTo(methodOn(BookController.class).findById(bookVO.getKey())).withSelfRel());
+		return bookVO;
 	}
 	
 	@DeleteMapping("/{id}")
