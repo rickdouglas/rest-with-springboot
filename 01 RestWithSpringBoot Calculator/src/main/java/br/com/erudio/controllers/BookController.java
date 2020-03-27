@@ -20,7 +20,7 @@ import br.com.erudio.data.vo.BookVO;
 import br.com.erudio.services.BookService;
 
 @RestController
-@RequestMapping("/book")
+@RequestMapping("/books")
 public class BookController {
 	
 	@Autowired
