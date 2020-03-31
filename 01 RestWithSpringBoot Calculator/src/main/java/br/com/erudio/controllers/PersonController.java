@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -61,6 +62,14 @@ public class PersonController {
 		personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
 		return personVO;
 	}
+	
+	@ApiOperation(value = "Disable a specific person by your ID" )
+	@PatchMapping(value = "/{id}", produces = { "application/json", "application/xml", "application/x-yaml" })
+	public PersonVO disablePerson(@PathVariable("id") Long id) {
+		PersonVO personVO = services.disablePerson(id);
+		personVO.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel());
+		return personVO;
+	}	
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") Long id){
