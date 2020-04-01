@@ -42,7 +42,7 @@ public class PersonController {
 	
 	
 	@ApiOperation(value = "Find all people" ) 
-	@GetMapping(produces = { "application/json", "application/xml", "application/x-yaml" })
+	@GetMapping(produces = { "application/json", "application/xml" })
 	public ResponseEntity<?> findAll(
 			@RequestParam(value="page", defaultValue = "0") int page,
 			@RequestParam(value="limit", defaultValue = "12") int limit,
