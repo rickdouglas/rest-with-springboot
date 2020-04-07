@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+	db:
+	rest-with-springboot
+networks:
+	udemy-network:
+		driver: bridge
