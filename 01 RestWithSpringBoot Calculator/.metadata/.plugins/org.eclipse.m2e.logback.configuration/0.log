@@ -1,0 +1,51 @@
+2020-04-07 16:09:21,590 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-04-07 16:10:45,027 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-04-07 16:12:46,214 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-04-07 16:13:26,268 [Worker-1: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.erudio:rest-with-springboot:0.0.1-SNAPSHOT @ /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/01 RestWithSpringBoot/pom.xml.
+2020-04-07 16:13:37,288 [Worker-1: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /01 RestWithSpringBoot/src/main/java
+2020-04-07 16:13:37,288 [Worker-1: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /01 RestWithSpringBoot/src/main/resources
+2020-04-07 16:13:37,289 [Worker-1: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /01 RestWithSpringBoot/src/main/resources
+2020-04-07 16:13:37,290 [Worker-1: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /01 RestWithSpringBoot/src/test/java
+2020-04-07 16:13:37,662 [Worker-1: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 20 sec
+2020-04-07 16:13:42,213 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:13:42,221 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-07 16:13:42,245 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-04-07 16:13:42,423 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:13:42,424 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/01 RestWithSpringBoot/src/test/resources
+2020-04-07 16:47:04,706 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:47:04,711 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/01 RestWithSpringBoot/src/main/resources
+2020-04-07 16:47:04,712 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/01 RestWithSpringBoot/src/main/resources
+2020-04-07 16:47:04,746 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:47:04,747 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/01 RestWithSpringBoot/src/test/resources
+2020-04-07 16:47:50,530 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.erudio:rest-with-springboot:0.0.1-SNAPSHOT @ /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/RestWithSpringBoot/pom.xml.
+2020-04-07 16:47:51,801 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RestWithSpringBoot/src/main/java
+2020-04-07 16:47:51,802 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RestWithSpringBoot/src/main/resources
+2020-04-07 16:47:51,802 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RestWithSpringBoot/src/main/resources
+2020-04-07 16:47:51,803 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RestWithSpringBoot/src/test/java
+2020-04-07 16:47:51,876 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2020-04-07 16:47:54,353 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:47:54,354 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-07 16:47:54,386 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-04-07 16:47:54,397 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:47:54,397 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/RestWithSpringBoot/src/test/resources
+2020-04-07 16:49:45,778 [Worker-12: Importing Maven projects] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Project RestWithSpringBoot already exists
+2020-04-07 16:49:45,783 [Worker-12: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2020-04-07 16:54:20,646 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:54:20,648 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-04-07 16:54:20,649 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-04-07 16:54:20,653 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 16:54:20,653 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/RestWithSpringBoot/src/test/resources
+2020-04-07 18:09:33,175 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 18:09:33,211 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-07 18:09:33,216 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-04-07 18:09:33,224 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 18:09:33,224 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/RestWithSpringBoot/src/test/resources
+2020-04-07 18:09:54,309 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 18:09:54,309 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-07 18:09:54,311 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-04-07 18:09:54,314 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 18:09:54,314 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/RestWithSpringBoot/src/test/resources
+2020-04-07 18:14:35,866 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 18:14:35,947 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-07 18:14:35,955 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 18:14:35,955 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rickdouglas/Estudos/Springboot/rest-with-springboot/01 RestWithSpringBoot Calculator/RestWithSpringBoot/src/test/resources

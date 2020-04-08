@@ -20,7 +20,7 @@ services:
     networks:
       - udemy-network
   rest-with-springboot:
-    image: rickdouglas/mysql-rest-with-springboot
+    image: rickdouglas/rest-with-springboot
     restart: always
     build: ./RestWithSpringBoot
     working_dir: /RestWithSpringBoot
